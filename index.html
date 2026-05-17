@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Materi Biologi Kelas X - Perubahan Lingkungan</title>
+    <style>
+        :root {
+            --primary-color: #2e7d32;
+            --secondary-color: #81c784;
+            --dark-color: #1b5e20;
+            --light-bg: #f1f8e9;
+            --text-color: #333;
+            --warning-color: #ffe082;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.7;
+            margin: 0;
+            padding: 0;
+            background-color: #fafafa;
+            color: var(--text-color);
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 2.5rem 1rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        header p {
+            margin: 0.5rem 0 0 0;
+            opacity: 0.9;
+            font-size: 1.1rem;
+        }
+
+        nav {
+            background-color: var(--dark-color);
+            padding: 0.5rem;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.6rem 1.2rem;
+            margin: 0 0.2rem;
+            font-weight: bold;
+            display: inline-block;
+            transition: all 0.3s;
+        }
+
+        nav a:hover {
+            background-color: var(--secondary-color);
+            border-radius: 4px;
+            color: var(--dark-color);
+        }
+
+        .container {
+            max-width: 950px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        section {
+            background: white;
+            padding: 2.5rem;
+            margin-bottom: 2.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            border-left: 6px solid var(--primary-color);
+        }
+
+        h2 {
+            color: var(--dark-color);
+            margin-top: 0;
+            border-bottom: 2px solid #edf2f7;
+            padding-bottom: 0.6rem;
+            font-size: 1.8rem;
+        }
+
+        h3 {
+            color: var(--primary-color);
+            margin-top: 1.5rem;
+            font-size: 1.3rem;
+        }
+
+        .highlight-box {
+            background-color: var(--light-bg);
+            border-left: 4px solid var(--secondary-color);
+            padding: 1.2rem;
+            margin: 1.5rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .alert-box {
+            background-color: #fffde7;
+            border-left: 4px solid #fbc02d;
+            padding: 1.2rem;
+            margin: 1.5rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .card {
+            background: #fdfdfd;
+            padding: 1.5rem;
+            border-radius: 6px;
+            border: 1px solid #e0e0e0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        }
+
+             /* Pengaturan Tabel */
+        .table-container {
+            max-width: 100%;
+            border: 1px solid #ddd;
+            overflow-x: auto; 
+            scroll-snap-type: x mandatory;
+            
+        }
+       
+          table {
+    border-collapse: collapse;
+    width: 100%;
+    min-width: 420px; /* Memberi lebar minimal agar bisa dites gesernya */
+    table-layout: auto;
+  }
+
+  th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+    background: white; /* Penting: agar kolom tidak transparan saat ditimpa */
+    word-wrap: break-word;
+    white-space: normal;
+    vertical-align: top;
+    scroll-snap-align: start;
+  }
+
+        /* Styling Kuis */
+        .quiz-container {
+            background: #f9f9f9;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px dashed var(--primary-color);
+        }
+
+        .quiz-option {
+            display: block;
+            width: 100%;
+            text-align: left;
+            background: #fff;
+            border: 2px solid #e0e0e0;
+            padding: 1rem;
+            margin: 0.6rem 0;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: all 0.2s;
+        }
+
+        .quiz-option:hover {
+            background: var(--light-bg);
+            border-color: var(--secondary-color);
+        }
+
+        #quiz-result {
+            margin-top: 1.5rem;
+            font-weight: bold;
+            padding: 1.2rem;
+            border-radius: 6px;
+            display: none;
+            line-height: 1.5;
+        }
+
+        footer {
+            background-color: #212121;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 5rem;
+        }
+
+        footer p {
+            margin: 0.5rem 0;
+        }
+
+        @media (max-width: 600px) {
+            header h1 { font-size: 1.8rem; }
+            nav a { padding: 0.5rem 0.7rem; font-size: 0.85rem; }
+            section { padding: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Perubahan Lingkungan</h1>
+        <p>Modul Belajar Mandiri Biologi Kelas X</p>
+    </header>
+
+    <nav>
+        <a href="#keseimbangan">Keseimbangan</a>
+        <a href="#pencemaran">Jenis Polusi</a>
+        <a href="#dampak">Dampak Global</a>
+        <a href="#solusi">Solusi & Kuis</a>
+    </nav>
+
+    <div class="container">
+
+        <!-- 1. KONSEP KESEIMBANGAN LINGKUNGAN -->
+        <section id="keseimbangan">
+            <h2>1. Konsep Keseimbangan Lingkungan</h2>
+            <p>Lingkungan hidup dikatakan seimbang (<em>homeostasis</em>) jika komponen biotik (makhluk hidup) dan abiotik (benda mati) berada dalam porsi yang proporsional dan saling berinteraksi dengan baik. Lingkungan memiliki mekanisme alami untuk mempertahankan dirinya melalui dua kemampuan utama:</p>
+            
+            <div class="highlight-box">
+                <ul>
+                    <li><strong>Daya Dukung Lingkungan (<em>Carrying Capacity</em>):</strong> Kemampuan lingkungan untuk menyediakan sumber daya kecukupan (seperti makanan, ruang, dan air) guna menopang kehidupan makhluk hidup secara optimal.</li>
+                    <li><strong>Daya Lenting Lingkungan (<em>Resilience</em>):</strong> Kemampuan lingkungan untuk pulih kembali ke keadaan seimbang setelah mengalami gangguan, tekanan, atau kerusakan (baik alami maupun buatan).</li>
+                </ul>
+            </div>
+            <p>Perubahan lingkungan yang merugikan terjadi ketika gangguan yang masuk melebihi batas daya lentingnya, sehingga keseimbangan tatanan lingkungan menjadi rusak.</p>
+        </section>
+
+        <!-- 2. JENIS-JENIS PENCEMARAN LINGKUNGAN -->
+        <section id="pencemaran">
+            <h2>2. Jenis-Jenis Pencemaran Lingkungan (Polusi)</h2>
+            <p>Zat atau komponen yang menyebabkan pencemaran disebut <strong>polutan</strong>. Suatu zat dikategorikan sebagai polutan jika kadarnya melebihi ambang batas normal, berada pada waktu yang tidak tepat, dan di tempat yang tidak semestinya.</p>
+            
+            <h3>A. Pencemaran Air</h3>
+            <p>Terjadi akibat masuknya zat asing yang menurunkan kualitas air. Indikator air tercemar dapat diukur dari tingginya nilai <strong>BOD</strong> (<em>Biochemical Oxygen Demand</em>) dan <strong>COD</strong> (<em>Chemical Oxygen Demand</em>).</p>
+            
+            <div class="alert-box">
+                <strong>Fenomena Krusial: Eutrofikasi</strong><br>
+                Merupakan proses penimbunan nutrisi berlebih (senyawa nitrat dan fosfat) di perairan yang biasanya berasal dari rembesan pupuk pertanian atau limbah detergen. Hal ini memicu <em>blooming algae</em> (ledakan populasi ganggang) yang menutupi permukaan air, menghalangi cahaya matahari, menurunkan kadar oksigen terlarut (DO), dan menyebabkan kematian massal organisme air.
+            </div>
+
+            <h3>B. Pencemaran Udara</h3>
+            <p>Disebabkan oleh gas-gas buang hasil aktivitas industri, kendaraan bermotor, maupun bencana alam.</p>
+            <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Polutan Udara</th>
+                        <th>Sumber Utama</th>
+                        <th>Dampak yang Ditimbulkan</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Karbon Monoksida (CO)</strong></td>
+                        <td>Pembakaran kendaraan tidak sempurna</td>
+                        <td>Sangat beracun; mengikat hemoglobin (Hb) darah jauh lebih cepat dibanding oksigen, memicu asfiksia.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Karbon Dioksida (CO₂)</strong></td>
+                        <td>Asap pabrik, pembakaran bahan bakar fosil</td>
+                        <td>Mengumpul di atmosfer dan memicu <strong>Efek Rumah Kaca</strong> (pemanasan global).</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Sulfur Dioksida (SO₂) & NOₓ</strong></td>
+                        <td>Aktivitas industri dan peleburan logam</td>
+                        <td>Bereaksi dengan uap air di awan membentuk asam, menyebabkan terjadinya <strong>Hujan Asam</strong>.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>CFC (Chlorofluorocarbon)</strong></td>
+                        <td>Pendingin AC, kulkas, gas aerosol</td>
+                        <td>Memecah molekul ozon (O₃) sehingga terjadi <strong>Penipisan Lapisan Ozon</strong> bumi.</td>
+                    </tr>
+                </tbody>
+            </table></div>
+
+            <h3>C. Pencemaran Tanah</h3>
+            <p>Disebabkan oleh limbah domestik padat yang sulit terurai (plastik, kaca, sterofoam), kebocoran minyak bumi, atau penggunaan pestisida pertanian secara masif yang dapat membunuh mikroorganisme dekomposer (pengurai) tanah.</p>
+        </section>
+
+        <!-- 3. DAMPAK LANJUTAN & FENOMENA GLOBAL -->
+        <section id="dampak">
+            <h2>3. Dampak Lanjutan & Fenomena Global</h2>
+            <p>Perubahan komponen lingkungan memicu dampak berantai yang berskala global, di antaranya:</p>
+            
+            <div class="grid">
+                <div class="card">
+                    <h4>Biomagnifikasi (Pekat Hayati)</h4>
+                    <p>Proses peningkatan akumulasi zat kimia beracun yang sifatnya stabil dan tidak dapat diurai tubuh (seperti logam berat merkuri atau pestisida DDT) melalui tingkatan trofik rantai makanan. Konsentrasi racun akan berlipat ganda dan mencapai <strong>kadar tertinggi pada konsumen puncak (predator tertinggi)</strong>.</p>
+                </div>
+                <div class="card">
+                    <h4>Kerusakan Biodiversitas</h4>
+                    <p>Alih fungsi lahan hutan menjadi perkebunan monokultur atau pemukiman memicu fenomena <em>habitat loss</em> (kehilangan habitat asli), yang menjadi penyebab utama kepunahan massal flora dan fauna endemik.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. UPAYA PENANGANAN & KUIS -->
+        <section id="solusi">
+            <h2>4. Upaya Penanganan Lingkungan</h2>
+            <p>Dalam ilmu biologi, terdapat penanganan ramah lingkungan yang mengoptimalkan agen hayati:</p>
+            <ul>
+                <li><strong>Bioremediasi:</strong> Proses pembersihan polutan di lingkungan (seperti tumpahan minyak di laut) dengan memanfaatkan peran mikroorganisme (bakteri atau jamur) untuk menguraikan zat beracun tersebut.</li>
+                <li><strong>Fitoremediasi:</strong> Metode dekontaminasi lingkungan dengan memanfaatkan kemampuan jenis <strong>tumbuhan tertentu</strong> (misal eceng gondok atau bunga matahari) untuk menyerap dan mengisolasi logam berat dari air atau tanah.</li>
+                <li><strong>Prinsip 4R:</strong> Langkah pengelolaan sampah anorganik mandiri melalui gerakan <em>Reduce</em> (mengurangi), <em>Reuse</em> (menggunakan kembali), <em>Recycle</em> (mendaur ulang), dan <em>Replace</em> (mengganti bahan ramah lingkungan).</li>
+            </ul>
+
+            <br>
+            <h3 style="border-top: 2px dashed #ccc; padding-top: 1.5rem;">Uji Pemahaman Mandiri</h3>
+            <div class="quiz-container">
+                <p><strong>Pertanyaan:</strong> Mengapa peristiwa Eutrofikasi di ekosistem danau dapat menyebabkan kematian massal pada ikan?</p>
+                
+                <button class="quiz-option" onclick="evaluasiKuis(1)">A. Karena ganggang menghasilkan racun langsung yang mematikan ikan.</button>
+                <button class="quiz-option" onclick="evaluasiKuis(2)">B. Karena permukaan air tertutup ganggang, menurunkan kadar oksigen terlarut (DO) di dalam air.</button>
+                <button class="quiz-option" onclick="evaluasiKuis(3)">C. Karena nilai BOD dan COD air mendadak turun drastis hingga nol.</button>
+                <button class="quiz-option" onclick="evaluasiKuis(4)">D. Karena air danau berubah sifat menjadi sangat asam seperti hujan asam.</button>
+
+                <div id="quiz-result"></div>
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 E-Modul Biologi Kelas X - Perubahan Lingkungan</p>
+        <p>Mari Beraksi Nyata untuk Kelestarian Bumi Kita 🌿</p>
+    </footer>
+
+    <script>
+        function evaluasiKuis(pilihan) {
+            const resultBox = document.getElementById('quiz-result');
+            resultBox.style.display = 'block';
+            
+            if (pilihan === 2) {
+                resultBox.style.backgroundColor = '#d4edda';
+                resultBox.style.color = '#155724';
+                resultBox.innerHTML = "🎉 JAWABAN BENAR!<br><small>Pembahasan: Ledakan populasi ganggang (blooming algae) menghalangi sinar matahari masuk ke dalam air. Akibatnya, tumbuhan air di dasar mati karena tidak bisa berfotosintesis. Proses pembusukan tumbuhan tersebut oleh bakteri menyedot habis oksigen terlarut (DO) sehingga ikan-ikan mati lemas karena kekurangan oksigen.</small>";
+            } else {
+                resultBox.style.backgroundColor = '#f8d7da';
+                resultBox.style.color = '#721c24';
+                resultBox.innerHTML = "❌ JAWABAN KURANG TEPAT.<br><small>Petunjuk: Hubungkan fenomena tertutupnya permukaan air oleh alga dengan ketersediaan gas vital yang dibutuhkan ikan untuk bernapas. Silakan analisis ulang materi Pencemaran Air di atas dan coba lagi!</small>";
+            }
+        }
+    </script>
+
+</body>
+</html>
